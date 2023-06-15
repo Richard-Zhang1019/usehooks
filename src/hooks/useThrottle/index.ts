@@ -5,8 +5,8 @@
  * @returns void
  */
 
-const useThrottle = (fn: Function, wait: number) => {
-  let timer: number | null
+const useThrottle = (fn: (...args: any[]) => any, wait: number) => {
+  let timer: NodeJS.Timeout | null
   return (...args: any[]) => {
     if (timer) {
       return
@@ -18,4 +18,4 @@ const useThrottle = (fn: Function, wait: number) => {
   }
 }
 
-export default useThrottle
+export { useThrottle }

@@ -5,8 +5,8 @@
  * @returns void
  */
 
-const useDebounce = (fn: Function, wait: number) => {
-  let timer: number
+const useDebounce = (fn: (...args: any[]) => any, wait: number) => {
+  let timer: NodeJS.Timeout
   return (...args: any[]) => {
     clearTimeout(timer)
     timer = setTimeout(() => {
@@ -15,4 +15,4 @@ const useDebounce = (fn: Function, wait: number) => {
   }
 }
 
-export default useDebounce
+export { useDebounce }

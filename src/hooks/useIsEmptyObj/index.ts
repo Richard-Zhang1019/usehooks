@@ -8,4 +8,4 @@ const useIsEmptyObj = (obj: object) => {
   return String(obj) === '[object Object]' && Reflect.ownKeys(obj).length === 0
 }
 
-export default useIsEmptyObj
+export { useIsEmptyObj }

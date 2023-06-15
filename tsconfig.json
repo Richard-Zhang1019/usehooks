@@ -8,9 +8,14 @@
     "baseUrl": "./",
     "paths": {
       "@@/*": [".dumi/tmp/*"],
-      "lucky-usehooks": ["src"],
-      "lucky-usehooks/*": ["src/*", "*"]
+      "lucky-usehooks": ["src", "docs", "docs/demo/*"],
+      "lucky-usehooks/*": ["src/*", "docs/*", "*", "docs/demo/*"]
     }
   },
-  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"]
+  "include": [
+    ".dumi/**/*",
+    ".dumirc.ts",
+    "src/**/*",
+    "docs/demo/useCountDown/demo01.tsx"
+  ]
 }
