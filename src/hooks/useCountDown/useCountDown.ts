@@ -1,3 +1,9 @@
+/**
+ * @description 倒计时函数
+ * @param num 倒计时的初始时间
+ * @returns 剩余时间
+ */
+
 import { useEffect, useRef, useState } from 'react'
 
 type Fnc = () => void
